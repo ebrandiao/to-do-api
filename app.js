@@ -11,7 +11,7 @@ const app = express();
 // utilizar o json no body das requisições
 app.use(express.json());
 
-// rotas
+// rotas pasta routes
 
 app.use('/todo', require('./routes/todo.routes'));
 
