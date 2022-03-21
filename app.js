@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require('cors');
 
 const express = require('express');
 const connectDb = require('./config/db.config');
@@ -10,6 +11,7 @@ const app = express();
 
 // utilizar o json no body das requisições
 app.use(express.json());
+app.use(cors());
 
 // rotas pasta routes
 
