@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/auth', require('./routes/auth.routes'));
 
 // Rotas privadas middleware de autorização
-
+app.use(require('./middleware/auth.middleware') )
 
 
 app.use('/todo', require('./routes/todo.routes'));

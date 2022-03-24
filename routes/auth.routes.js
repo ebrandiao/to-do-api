@@ -45,9 +45,18 @@ router.post('/login', async (req, res) => {
       throw error
     }
     const compareHash = await bcrypt.compare(password, user.password);
+    if (!compareHash) {
+      throw new Error("Username or pasword invalid")
+    }
+    const payload = {
+      name
+    }
+    const token = jwt.sign(payload, process.env.SENHA_JWT, { expiresIn: '1day' } )
+    res.status(200).json( { payload, token } )
 
   } catch (error) {
 
+    res.status( error.status || 500 ).json( { msg: error.message } )
   }
 })
 
