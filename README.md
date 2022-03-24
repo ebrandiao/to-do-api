@@ -1,4 +1,4 @@
-# BOOTCAMP WEB DEVELOPMENT - fulltime
+# BOOTCAMP WEB DEVELOPMENT - part-time
 ## IRONHACK
 
 Projeto desenvolvido em Javascript
